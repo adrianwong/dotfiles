@@ -21,6 +21,17 @@
     br   = branch
     dh1  = diff HEAD~1
 
+    # Semantic commit messages.
+    # Alias convention: 'c' for 'commit', followed by the first
+    # two letters of the commit type.
+    cch  = "!. ~/.githelpers && semantic_commit_message chore"
+    cdo  = "!. ~/.githelpers && semantic_commit_message docs"
+    cfe  = "!. ~/.githelpers && semantic_commit_message feat"
+    cfi  = "!. ~/.githelpers && semantic_commit_message fix"
+    cre  = "!. ~/.githelpers && semantic_commit_message refactor"
+    cst  = "!. ~/.githelpers && semantic_commit_message style"
+    cte  = "!. ~/.githelpers && semantic_commit_message test"
+
     # Fancy logging. Shamelessly ripped from @garybernhardt.
     #   h  = head
     #   hp = head with patch

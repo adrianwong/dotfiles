@@ -64,3 +64,11 @@ pretty_git_log() {
             less --quit-if-one-screen --no-init --RAW-CONTROL-CHARS --chop-long-lines
         fi
 }
+
+semantic_commit_message() {
+    if [ -z "$2" ]; then
+        echo "usage: git c${1:0:2} \"[commit_message]\""
+    else
+        git commit --message "$1: $2"
+    fi
+}
