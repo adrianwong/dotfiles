@@ -10,9 +10,12 @@
     di   = diff
     dc   = diff --cached
     au   = add --update
+    ap   = add --patch
     aa   = add --all
     ci   = commit --verbose
     cam  = commit --amend
+    rbi  = rebase --interactive
+    rbc  = rebase --continue
     co   = checkout
     mff  = merge --ff-only
     mxff = merge --no-ff
