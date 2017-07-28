@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Create a symbolic link in the home directory
+create_symlink() {
+    if [ -z "$1" ]; then
+        echo "usage: create_symlink \"[dotfile]\""
+    else
+        ln -sfn "$(pwd)/$1" "$HOME/$1"
+        echo "symlink created: $HOME/$1 -> $(pwd)/$1"
+    fi
+}
+
+# Git
+create_symlink ".gitconfig"
+create_symlink ".githelpers"
