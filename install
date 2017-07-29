@@ -22,3 +22,7 @@ create_symlink() {
 # Git
 create_symlink "git/.gitconfig"
 create_symlink "git/.githelpers"
+
+# Vim
+create_symlink "vim/.vimrc"
+mkdir -p "$HOME/.vim/colors" && cp "vim/molokai.vim" "$HOME/.vim/colors/"
