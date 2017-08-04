@@ -27,13 +27,14 @@
     # Semantic commit messages.
     # Alias convention: 'c' for 'commit', followed by the first
     # two letters of the commit type.
-    cch  = "!. ~/.githelpers && semantic_commit_message chore"
-    cdo  = "!. ~/.githelpers && semantic_commit_message docs"
-    cfe  = "!. ~/.githelpers && semantic_commit_message feat"
-    cfi  = "!. ~/.githelpers && semantic_commit_message fix"
-    cre  = "!. ~/.githelpers && semantic_commit_message refactor"
-    cst  = "!. ~/.githelpers && semantic_commit_message style"
-    cte  = "!. ~/.githelpers && semantic_commit_message test"
+    scm  = "!. ~/.githelpers && semantic_commit_message"
+    cch  = !git scm "chore"
+    cdo  = !git scm "docs"
+    cfe  = !git scm "feat"
+    cfi  = !git scm "fix"
+    cre  = !git scm "refactor"
+    cst  = !git scm "style"
+    cte  = !git scm "test"
 
     # Fancy logging. Shamelessly ripped from @garybernhardt.
     #   h  = head

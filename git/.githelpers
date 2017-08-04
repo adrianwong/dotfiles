@@ -66,9 +66,9 @@ pretty_git_log() {
 }
 
 semantic_commit_message() {
-    if [ -z "$2" ]; then
-        echo "usage: git c${1:0:2} \"[commit_message]\""
-    else
+    if [ -n "$1" ] && [ -n "$2" ]; then
         git commit --message "$1: $2"
+    else
+        echo "usage: semantic_commit_message \"type\" \"message\""
     fi
 }
