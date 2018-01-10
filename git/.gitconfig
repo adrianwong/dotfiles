@@ -20,6 +20,7 @@
     mff  = merge --ff-only
     mxff = merge --no-ff
     pff  = pull --ff-only
+    prb  = pull --rebase
     fa   = fetch --all
     br   = branch
     dh1  = diff HEAD~1
