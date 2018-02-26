@@ -15,11 +15,11 @@
 # used to split on them. A } in the commit subject or any other field will
 # break this.
 
-HASH="@@yellow%h@@"
-RELATIVE_TIME="@@green(%ar)@@"
-AUTHOR="@@bluebold<%an>@@"
-REFS="@@redbold%d@@"
-SUBJECT="%s"
+HASH='@@yellow%h@@'
+RELATIVE_TIME='@@green(%ar)@@'
+AUTHOR='@@bluebold<%an>@@'
+REFS='@@redbold%d@@'
+SUBJECT='%s'
 
 FORMAT="$HASH}$RELATIVE_TIME}$AUTHOR}$REFS $SUBJECT"
 
@@ -43,7 +43,7 @@ ANSI_RESET='\033[0m'
 
 show_git_head() {
     pretty_git_log -1
-    git show -p --pretty="tformat:"
+    git show -p --pretty='tformat:'
 }
 
 pretty_git_log() {
@@ -58,12 +58,12 @@ pretty_git_log() {
         # column alignment. Roll our own implementation that inserts colors
         # after piping to `column`. See:
         # https://stackoverflow.com/questions/46229359/how-to-do-alignment-in-git-logs-with-graph
-        colorize_line "@@yellow([a-z0-9]+)@@" $ANSI_YELLOW |
-        colorize_line "@@green(\([^)]+\))@@" $ANSI_GREEN |
-        colorize_line "@@bluebold(<[^>]+>)@@" $ANSI_BLUE_BOLD |
-        colorize_line "@@redbold( \([^)]+\))?@@" $ANSI_MAGENTA_BOLD |
+        colorize_line '@@yellow([a-z0-9]+)@@' $ANSI_YELLOW |
+        colorize_line '@@green(\([^)]+\))@@' $ANSI_GREEN |
+        colorize_line '@@bluebold(<[^>]+>)@@' $ANSI_BLUE_BOLD |
+        colorize_line '@@redbold( \([^)]+\))?@@' $ANSI_MAGENTA_BOLD |
         # Color merge commits specially
-        colorize_line "(Merge (branch|remote-tracking branch|pull request) .*$)" $ANSI_RED |
+        colorize_line '(Merge (branch|remote-tracking branch|pull request) .*$)' $ANSI_RED |
         # Page only if we're asked to
         if [ -n "$GIT_NO_PAGER" ]; then
             cat
@@ -77,7 +77,7 @@ colorize_line() {
     if [ -n "$1" ] && [ -n "$2" ]; then
         sed -Ee "s/$1/$(printf $2)\1$(printf $ANSI_RESET)/"
     else
-        echo "usage: colorize_line \"regex\" \"ansi_color_escape_sequence\""
+        echo 'usage: colorize_line "regex" "ansi_color_escape_sequence"'
     fi
 }
 
@@ -85,12 +85,12 @@ semantic_commit_message() {
     if [ -n "$1" ] && [ -n "$2" ]; then
         git commit --message "$1: $2"
     else
-        echo "usage: semantic_commit_message \"type\" \"message\""
+        echo 'usage: semantic_commit_message "type" "message"'
     fi
 }
 
 push_upstream() {
-    typeset REMOTE="origin"
+    typeset REMOTE='origin'
 
     if [ -n "$1" ]; then
         REMOTE="$1"
