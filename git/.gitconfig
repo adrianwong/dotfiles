@@ -21,6 +21,7 @@
     mxff = merge --no-ff
     pff  = pull --ff-only
     prb  = pull --rebase
+    pup  = "!. ~/.githelpers && push_upstream"
     rbc  = rebase --continue
     rbi  = rebase --interactive
     st   = status

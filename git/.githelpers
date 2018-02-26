@@ -88,3 +88,13 @@ semantic_commit_message() {
         echo "usage: semantic_commit_message \"type\" \"message\""
     fi
 }
+
+push_upstream() {
+    typeset REMOTE="origin"
+
+    if [ -n "$1" ]; then
+        REMOTE="$1"
+    fi
+
+    git push --set-upstream $REMOTE "$(git rev-parse --abbrev-ref HEAD)"
+}
