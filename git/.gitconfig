@@ -6,24 +6,24 @@
     ui = auto
 
 [alias]
-    st   = status
-    di   = diff
-    dc   = diff --cached
-    au   = add --update
-    ap   = add --patch
     aa   = add --all
-    ci   = commit --verbose
+    ap   = add --patch
+    au   = add --update
+    br   = branch
     cam  = commit --amend
-    rbi  = rebase --interactive
-    rbc  = rebase --continue
+    ci   = commit --verbose
     co   = checkout
+    dc   = diff --cached
+    dh1  = diff HEAD~1
+    di   = diff
+    fa   = fetch --all
     mff  = merge --ff-only
     mxff = merge --no-ff
     pff  = pull --ff-only
     prb  = pull --rebase
-    fa   = fetch --all
-    br   = branch
-    dh1  = diff HEAD~1
+    rbc  = rebase --continue
+    rbi  = rebase --interactive
+    st   = status
 
     # Semantic commit messages.
     # Alias convention: 'c' for 'commit', followed by the first
