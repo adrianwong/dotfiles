@@ -2,7 +2,7 @@
 syntax enable
 
 " Set colorscheme
-colorscheme molokai
+colorscheme monokai
 
 " Number of visual spaces per <TAB>
 set tabstop=4
