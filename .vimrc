@@ -54,3 +54,6 @@ inoremap <s-tab> <c-n>
 " status line
 set laststatus=2
 set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
+
+" remap <leader>
+let mapleader=","
