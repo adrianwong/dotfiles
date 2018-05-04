@@ -1,3 +1,5 @@
+execute pathogen#infect()
+
 " disable vi compatibility
 set nocompatible
 
