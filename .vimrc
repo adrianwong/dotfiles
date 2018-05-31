@@ -22,6 +22,8 @@ set expandtab
 set softtabstop=4
 " visual spaces per <tab>
 set tabstop=4
+" spaces indented/unindented per >>/<<
+set shiftwidth=4
 " copy previous line's indentation to new line
 set autoindent
 
