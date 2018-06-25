@@ -19,6 +19,9 @@ create_symlink() {
     fi
 }
 
+# GHC
+create_symlink '.ghci'
+
 # Git
 create_symlink '.gitconfig'
 create_symlink '.githelpers'
