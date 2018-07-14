@@ -10,6 +10,10 @@ set number
 " show current line and cursor position
 set ruler
 
+" enable file type detection
+" load plugin files for specific file types
+filetype plugin on
+
 " color scheme
 colorscheme monokai
 
