@@ -17,6 +17,8 @@
     dh1  = diff HEAD~1
     di   = diff
     fa   = fetch --all
+    iu   = update-index --assume-unchanged
+    ixu  = update-index --no-assume-unchanged
     mff  = merge --ff-only
     mxff = merge --no-ff
     pff  = pull --ff-only
