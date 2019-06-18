@@ -27,10 +27,4 @@ create_symlink '.gitconfig'
 create_symlink '.githelpers'
 
 # Vim
-create_symlink '.vim'
 create_symlink '.vimrc'
-
-pushd '.vim/bundle/command-t/ruby/command-t/ext/command-t'
-/System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin/ruby extconf.rb
-make
-popd

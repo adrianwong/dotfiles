@@ -1,5 +1,3 @@
-execute pathogen#infect()
-
 " disable vi compatibility
 set nocompatible
 
@@ -13,9 +11,6 @@ set ruler
 " enable file type detection
 " load plugin files for specific file types
 filetype plugin on
-
-" color scheme
-colorscheme monokai
 
 " commands to remember
 set history=5000
