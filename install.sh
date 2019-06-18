@@ -28,3 +28,6 @@ create_symlink '.githelpers'
 
 # Vim
 create_symlink '.vimrc'
+
+# ZSH
+create_symlink '.zshrc'
