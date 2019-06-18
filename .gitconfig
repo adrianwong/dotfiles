@@ -6,7 +6,13 @@
     ui = auto
 
 [core]
-    pager = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
+    # macOS (+ Homebrew Git)
+    # pager = /usr/local/opt/git/share/git-core/contrib/diff-highlight/diff-highlight | less
+
+    # Arch Linux
+    pager = /usr/share/git/diff-highlight/diff-highlight | less
+
+    editor = vim
 
 [alias]
     aa   = add --all
