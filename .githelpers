@@ -43,14 +43,6 @@ pretty_git_log() {
         fi
 }
 
-semantic_commit_message() {
-    if [ -n "$1" ] && [ -n "$2" ]; then
-        git commit --message "$1: $2"
-    else
-        echo 'usage: semantic_commit_message "type" "message"'
-    fi
-}
-
 push_upstream() {
     typeset REMOTE='origin'
 
