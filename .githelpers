@@ -11,8 +11,8 @@
 # author name, ensuring that we don't destroy anything in the commit message
 # that looks like time.
 #
-# The log format uses } characters between each field, and `column` is later
-# used to split on them. A } in the commit subject or any other field will
+# The log format uses ¿ characters between each field, and `column` is later
+# used to split on them. A ¿ in the commit subject or any other field will
 # break this.
 
 HASH='%C(always,yellow)%h%C(always,reset)'
@@ -21,7 +21,7 @@ AUTHOR='%C(always,bold blue)<%an>%C(always,reset)'
 REFS='%C(always,bold magenta)%d%C(always,reset)'
 SUBJECT='%s'
 
-FORMAT="$HASH}$RELATIVE_TIME}$AUTHOR}$REFS $SUBJECT"
+FORMAT="$HASH¿$RELATIVE_TIME¿$AUTHOR¿$REFS $SUBJECT"
 
 ANSI_RED='\033[31m'
 ANSI_RESET='\033[0m'
@@ -37,8 +37,8 @@ pretty_git_log() {
         sed -Ee 's/(^[^<]*) ago\)/\1)/' |
         # Replace (2 years, 5 months) with (2 years)
         sed -Ee 's/(^[^<]*), [[:digit:]]+ .*months?\)/\1)/' |
-        # Line columns up based on } delimiter
-        column -s '}' -t |
+        # Line columns up based on ¿ delimiter
+        column -s '¿' -t |
         # Color merge commits specially
         sed -Ee "s/(Merge (branch|remote-tracking branch|pull request) .*$)/$(printf $ANSI_RED)\1$(printf $ANSI_RESET)/" |
         # Page only if we're asked to
