@@ -22,6 +22,7 @@
     cam  = commit --amend
     ci   = commit --verbose
     co   = checkout
+    cp   = cherry-pick
     dc   = diff --cached
     dh1  = diff HEAD~1
     di   = diff
