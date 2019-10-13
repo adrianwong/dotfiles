@@ -20,7 +20,7 @@ show_git_head() {
 }
 
 pretty_git_log() {
-    git log --graph --color=auto --pretty="tformat:${FORMAT}" $* |
+    git log --graph --color=auto --pretty="tformat:${FORMAT}" "$@" |
         # The time massaging regexes start with ^[^<]* because that ensures that they
         # only operate before the first "<". That "<" will be the beginning of the
         # author name, ensuring that we don't destroy anything in the commit message
@@ -50,5 +50,5 @@ push_upstream() {
         REMOTE="$1"
     fi
 
-    git push --set-upstream $REMOTE "$(git rev-parse --abbrev-ref HEAD)"
+    git push --set-upstream "$REMOTE" "$(git rev-parse --abbrev-ref HEAD)"
 }
