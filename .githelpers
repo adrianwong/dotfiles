@@ -44,8 +44,7 @@ pretty_git_log() {
 }
 
 push_upstream() {
-    typeset REMOTE='origin'
-
+    local REMOTE='origin'
     if [ -n "$1" ]; then
         REMOTE="$1"
     fi
