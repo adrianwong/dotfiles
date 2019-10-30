@@ -34,6 +34,7 @@
     pff  = pull --ff-only
     prb  = pull --rebase
     pup  = "!. ~/.githelpers && push_upstream"
+    rb   = rebase
     rbc  = rebase --continue
     rbi  = rebase --interactive
     st   = status
